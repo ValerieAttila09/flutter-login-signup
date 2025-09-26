@@ -23,7 +23,14 @@ This document outlines the plan for creating a Flutter application with a login 
     - A light theme will be created with a neutral color palette.
     - `google_fonts` will be used for a clean and modern typography.
 
-### 3. Update Main Application File
+### 3. Create Dashboard Screen
+
+- **File:** `lib/dashboard_screen.dart`
+- **Purpose:** To provide a dashboard screen for the user after they log in or register.
+- **Details:**
+    - A simple screen with a welcome message and a logout button.
+
+### 4. Update Main Application File
 
 - **File:** `lib/main.dart`
 - **Purpose:** To integrate the new theme and set the authentication screen as the entry point.
