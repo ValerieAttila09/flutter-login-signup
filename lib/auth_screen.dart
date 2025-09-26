@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:myapp/dashboard_screen.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -10,6 +11,14 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   bool _isLogin = true;
+
+  void _submit() {
+    // Here you would typically add your authentication logic.
+    // For this example, we'll just navigate to the dashboard.
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const DashboardScreen()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +55,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ],
                 const SizedBox(height: 32),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: _submit,
                   child: Text(_isLogin ? 'Login' : 'Register'),
                 ),
                 const SizedBox(height: 24),
